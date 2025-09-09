@@ -7,6 +7,7 @@
   <!-- Tailwind and DaisyUI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./style.css">
 
   <title>Green Earth</title>
 </head>
@@ -131,15 +132,15 @@
       <div class="w-11/12 mx-auto py-12">
         <h2 class="font-semibold text-3xl text-center">Our Impact</h2>
         <div class="grid grid-cols-12">
-          <div class="bg-white p-6 rounded-lg shadow-md col-span-4 text-center m-4">
+          <div class="hover:bg-green-300 bg-white p-6 rounded-lg shadow-md col-span-4 text-center m-4">
             <h3 class="text-2xl font-bold text-green-600">500k</h3>
             <p class="mt-2 text-[#1F2937]">Trees Planted</p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-md col-span-4 text-center m-4">
+          <div class="hover:bg-green-300 bg-white p-6 rounded-lg shadow-md col-span-4 text-center m-4">
             <h3 class="text-2xl font-bold text-green-600">120+</h3>
             <p class="mt-2 text-[#1F2937]">Communities Involved</p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-md col-span-4 text-center m-4">
+          <div class="hover:bg-green-300 bg-white p-6 rounded-lg shadow-md col-span-4 text-center m-4">
             <h3 class="text-2xl font-bold text-green-600">30+</h3>
             <p class="mt-2 text-[#1F2937]">Countries Reached</p>
           </div>
@@ -178,6 +179,21 @@
   <footer class="bg-[#14532D] text-white p-6">
     <p class="text-center">© 2025 Green Earth. All Rights Reserved.</p>
   </footer>
+
+  <!-- Modal -->
+<dialog id="card_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="modal-body">
+      
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
   <script src="./script/index.js"></script>
 </body>
 
