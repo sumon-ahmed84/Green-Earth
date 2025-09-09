@@ -8,6 +8,16 @@ const categorylist=()=>{
 };
 categorylist();
 
+const manageLoading=(isLoading)=>{
+  if(isLoading==true){
+    document.getElementById("idloading").classList.remove("hidden");
+    document.getElementById("allcatagory-card").classList.add("hidden");
+  }else{
+    document.getElementById("idloading").classList.add("hidden");
+    document.getElementById("allcatagory-card").classList.remove("hidden");
+  }
+};
+
 // Fetch and render plant details in the modal
 const carddetail=async (id)=>{
   const url=`https://openapi.programming-hero.com/api/plant/${id}`;
@@ -72,6 +82,7 @@ const removeactive=()=>{
 // plants by categories
 
 const filterCategory=(id)=>{
+    manageLoading(true);
     const url=`https://openapi.programming-hero.com/api/category/${id}`;
     // console.log(url);
     fetch(url)
@@ -107,6 +118,7 @@ const displyshowcatagory=(card)=>{
         carddiv.append(div);
 
     });
+    manageLoading(false);
 };
 
 // Display categories in the sidebar
