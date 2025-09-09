@@ -103,6 +103,7 @@ const defultcard = (cards) => {
     // Add event listener for Add to Cart
     setTimeout(() => {
       div.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+        alert(`${cards.name} has been added to the cart`);
         cart.push({ name: cards.name, price: Number(cards.price) });
         updateCartDisplay();
       });
@@ -160,8 +161,10 @@ const displyshowcatagory = (card) => {
     // Add event listener for Add to Cart
     setTimeout(() => {
       div.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+        
         cart.push({ name: cards.name, price: Number(cards.price) });
         updateCartDisplay();
+        
       });
     }, 0);
     carddiv.append(div);
